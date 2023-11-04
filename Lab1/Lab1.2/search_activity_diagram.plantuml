@@ -1,0 +1,18 @@
+@startuml
+|User|
+start
+:Enters search query;
+:Press search button;
+|System|
+:Sends search query;
+|Database|
+:Queries database for matching results;
+:Returns matching results;
+|System|
+if (Result is not empty ?) then (yes)
+  :Display results;
+  stop
+else (no)
+  :Display no results found;
+  stop
+@end
