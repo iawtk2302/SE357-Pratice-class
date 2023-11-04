@@ -1,0 +1,18 @@
+@startuml
+actor User
+boundary RegisterScreen
+entity Database
+
+User -> RegisterScreen : enter info register
+User -> RegisterScreen : send()
+RegisterScreen -> Database: send request validation()
+Database --> RegisterScreen : return result
+alt valid
+RegisterScreen --> User : notify success
+RegisterScreen -> RegisterScreen : auto login
+RegisterScreen -> RegisterScreen : display home screen
+else invalid
+RegisterScreen --> User : notify fail
+RegisterScreen -> RegisterScreen : display fail alert 
+end
+@enduml

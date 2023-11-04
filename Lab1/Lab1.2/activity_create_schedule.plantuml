@@ -1,0 +1,20 @@
+@startuml
+|User1|
+start
+repeat :enter info;
+  :click send request;
+  |System|
+  :validate;
+repeat while (valid?) is (no)
+-> yes;
+  :send request to User2;
+  |User2|
+  :show notification;
+  :choose answer;
+  |System|
+  :add to schedule;
+  :send answer to User1;
+  |User1|
+  :show notification;
+stop
+@enduml

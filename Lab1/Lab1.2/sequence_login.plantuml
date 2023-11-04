@@ -1,0 +1,17 @@
+@startuml
+actor User
+boundary LoginScreen
+entity Database
+
+User -> LoginScreen : enter username & password
+User -> LoginScreen : login()
+LoginScreen -> Database: validation
+Database --> LoginScreen : return result
+alt valid
+LoginScreen --> User : notify success
+LoginScreen -> LoginScreen : display home screen
+else invalid
+LoginScreen --> User : notify fail
+LoginScreen -> LoginScreen : display fail alert 
+end
+@enduml

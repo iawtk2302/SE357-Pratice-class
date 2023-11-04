@@ -1,0 +1,24 @@
+@startuml
+actor User1
+boundary ChatScreen1
+control Server
+entity Database
+boundary ChatScreen2
+actor User2
+
+User1 -> ChatScreen1 : type message
+User1 -> ChatScreen1 : send()
+ChatScreen1 -> Server : send message
+Server -> Database : save()
+Database --> Server : return result
+alt error
+Server -> ChatScreen1 : display error
+else success
+Server -> ChatScreen2 : send message()
+Server --> User2: notify()
+ChatScreen2 -> ChatScreen2: display message
+Server --> ChatScreen1 : return result
+ChatScreen1 -> ChatScreen1 : display message
+end
+
+@enduml

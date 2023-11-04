@@ -1,0 +1,15 @@
+@startuml
+|User|
+start
+repeat :enter info register;
+  :click "sign up" button;
+  |System|
+  :validate;
+  :message;
+repeat while(valid?) is (no)
+-> yes;
+  :auto Login;
+  |User|
+  :go to home page;
+stop
+@enduml

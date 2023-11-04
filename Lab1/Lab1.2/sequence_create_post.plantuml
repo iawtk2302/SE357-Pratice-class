@@ -1,0 +1,20 @@
+@startuml
+actor User
+boundary CreatePostScreen
+control Server
+entity Database
+
+User -> CreatePostScreen : type input
+User -> CreatePostScreen : create post()
+CreatePostScreen -> Server: request create post()
+Server -> Database : save()
+Database --> Server : return result
+Server --> CreatePostScreen : return result
+alt success
+CreatePostScreen --> User : notify success
+CreatePostScreen -> CreatePostScreen : Display post
+else fail
+CreatePostScreen --> User : notify fail
+CreatePostScreen -> CreatePostScreen: display fail alert
+end
+@enduml
