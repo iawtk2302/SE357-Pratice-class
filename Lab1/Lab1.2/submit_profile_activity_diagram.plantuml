@@ -1,0 +1,18 @@
+@startuml
+|User|
+start
+:Upload profile;
+:Press submit button;
+|System|
+:Request to submit a profile;
+|Database|
+:Create a new profile in the database;
+:Returns result;
+|System|
+if (Check status) then (success)
+  :Display successful message;
+  stop
+else (failure)
+  :Display failure message;
+  stop
+@end
