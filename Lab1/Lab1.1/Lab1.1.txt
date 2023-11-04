@@ -79,3 +79,18 @@ Answers:
         + Resource Intensive: Archiving all data in the tool can be resource-intensive, especially for projects with large amounts of data. It may require significant storage space and computational resources to maintain and manage the archived data. This can result in additional costs and resource allocation for the archiving process.
         + Retrieval Complexity: Retrieving archived data from the long-term archive may be time-consuming and complex. The archived data may be stored in a format that requires specialized tools or processes to access and interpret. This can create challenges when there is a need to retrieve specific information from the archive, potentially causing delays or difficulties in accessing the required data.
         + Compatibility Issues: While the archived data is stored in a format accessible without the tool, there is no guarantee of compatibility with future tools and formats. Over time, software tools and technologies evolve, and the archived data may become incompatible or difficult to integrate with newer tools or systems. This can limit the usability and accessibility of the archived data in the future.
+5. 
+- Tools can be useful for improving requirements engineering practices, but they are not a substitute for a well-defined process, skilled engineers, and effective communication.
+- Tools should be introduced only after a careful evaluation of their suitability, usability, compatibility, and scalability for the specific environment and project needs.
+
+6. 
+- Missing requirements: Some requirements may not be traced to any source or stakeholder, indicating that they are not justified or validated.
+- Inconsistent requirements: Some requirements may be traced to conflicting sources or stakeholders, indicating that they are not agreed upon or reconciled.
+- Unsatisfied requirements: Some requirements may not be traced to any design element, test case, or implementation component, indicating that they are not fulfilled or verified.
+- Unnecessary elements: Some design elements, test cases, or implementation components may not be traced to any requirement, indicating that they are redundant or irrelevant.
+
+7. 
+- Natural language processing (NLP): AI can be used to analyze natural language texts, such as stakeholder interviews, documents, or online sources, and extract relevant information, concepts, and relationships for requirements engineering. NLP can also be used to generate natural language specifications from formal models or vice versa.
+- Ontologies and semantic web: AI can be used to create and manage ontologies, which are formal representations of the concepts and relationships in a domain. Ontologies can help to structure, organize, and share knowledge for requirements engineering. Semantic web technologies can also enable interoperability and integration of heterogeneous data sources and systems.
+- Machine learning (ML): AI can be used to learn from data and discover patterns, trends, anomalies, or preferences for requirements engineering. ML can also be used to classify, cluster, or rank requirements based on various criteria or metrics. ML can also support requirements validation, verification, and testing by generating test cases, scenarios, or oracles.
+- Knowledge-based systems (KBS): AI can be used to create and use knowledge bases, which are collections of facts and rules that represent domain knowledge. KBS can provide reasoning and inference capabilities for requirements engineering, such as checking consistency, completeness, or correctness of requirements, or suggesting improvements or alternatives. KBS can also support decision making and negotiation among stakeholders.

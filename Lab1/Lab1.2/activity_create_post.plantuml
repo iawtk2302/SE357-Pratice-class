@@ -1,0 +1,14 @@
+@startuml
+|User|
+start
+repeat :enter post info;
+  :click create post;
+  |System|
+  :validate;
+repeat while (valid?) is (no)
+-> yes;
+  |User|
+  :show successful alert;
+  :show post;
+stop
+@enduml

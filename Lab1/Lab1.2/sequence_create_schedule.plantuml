@@ -1,0 +1,26 @@
+@startuml
+actor User1
+boundary CreateScheduleScreen
+control Server
+entity Database
+actor User2
+
+User1 -> CreateScheduleScreen : enter info schedule
+User1 -> CreateScheduleScreen : create schedule()
+CreateScheduleScreen -> Server: send request()
+Server -> Database : save()
+Database --> Server : return result
+Server --> User2 : notify()
+User2 -> User2 : choose answer
+User2 -> Server : send answer
+Server -> Database : save()
+Database --> Server : return result
+Server --> CreateScheduleScreen : return result
+alt accept
+CreateScheduleScreen --> User1: notify
+CreateScheduleScreen -> CreateScheduleScreen : display success notification
+else reject
+CreateScheduleScreen --> User1: notify
+CreateScheduleScreen -> CreateScheduleScreen : display reject notification
+end
+@enduml

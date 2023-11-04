@@ -1,0 +1,21 @@
+@startuml
+|User1|
+start
+:choose user to send message;
+repeat :type message;
+  :click "send" button;
+  :send to server;
+  backward: show error alert;
+repeat while (successful?) is (no)
+-> yes;
+  |System|
+  :save to database;
+  :send message to User2;
+  |User2|
+  fork
+    :show message;
+  fork again
+    :notify;
+  end fork
+stop
+@enduml

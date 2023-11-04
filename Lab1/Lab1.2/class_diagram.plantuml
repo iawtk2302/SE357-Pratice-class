@@ -1,0 +1,144 @@
+@startuml
+
+class Account {
+  + userName: String
+  + password: String
+  bool update()
+}
+
+class Person {
+  + fullName: String
+  + email: String
+  + phone: String
+  bool update()
+}
+
+class Admin {
+  bool blockPost()
+  bool blockUser()
+  bool unBlockPost()
+  bool unBlockUser()
+}
+
+class Member{
+  + dateOfMembership: DateTime
+  bool update()
+  bool sendMessage()
+  bool createPost()
+  bool createGroup()
+}
+
+class Photographer {
+  bool createScheduleConfirmation()
+  bool postJob()
+}
+
+class Model {
+  bool sendApplicationRequest()
+}
+
+class Customer {
+  
+}
+
+class Job {
+  + title: String
+  + description: String
+  + createdAt: DateTime
+  + endTime: DateTime
+  bool update()
+}
+
+class Application {
+  + linkCV: String
+  + userApplied: Member
+  bool update()
+}
+
+class Task {
+  + title: String
+  + description: String
+  + date: DateTime
+  + startTime: DateTime
+  + endTime: DateTime
+  bool update()
+}
+
+class ScheduleConfirmation {
+  + startTime: DateTime
+  + endTime: DateTime
+  + title: String
+  + description: String
+  + userConfirmed: Member
+  bool accept()
+  bool reject()
+}
+
+class ApplicationRequest {
+  + userPostJob: Member
+  + linkCV: String
+  bool accept()
+  bool reject()
+}
+
+class Message {
+  + sendTo: Member[]
+  + media: Media
+  + body: String
+  bool addMember()
+}
+
+class Notification {
+  + createAt: DateTime
+  + content: String
+  void send()
+}
+
+class Post {
+  + text: String
+  + totalLikes: Number
+  + totalShares: Number
+  + images: Image[]
+  bool update()
+  bool delete()
+}
+
+class Comment {
+  + body: String
+  bool updateBody()
+}
+
+class Group {
+  + name: String
+  + description: String
+  + members: Member[]
+  bool addMember()
+}
+
+Person *-- Account
+Person <|-- Admin
+Person <|-- Member
+
+Member <|-- Photographer
+Member <|-- Model
+Member <|-- Customer
+Member -- Group
+Member -- Post
+Member -- Message
+
+Photographer -- Job
+Photographer -- Task
+Photographer -- ScheduleConfirmation
+Job -- Application
+
+Model -- Task
+Model -- ApplicationRequest
+
+
+Notification -- ScheduleConfirmation
+Notification -- ApplicationRequest
+Notification -- Message
+Notification -- Post
+Notification -- Comment
+
+@enduml
