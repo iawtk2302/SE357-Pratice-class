@@ -1,0 +1,21 @@
+@startuml
+actor User 
+participant System 
+database Database 
+
+
+User -> System: Request to review a photographer
+activate System
+System -> Database: Retrieve photo shoot details from the database
+activate Database
+Database --> System: Return photo shoot information
+deactivate Database
+System --> User: Display photo shoot details for review
+User -> System: Provide the photo shoot review
+System -> Database: Save the review in the database
+activate Database
+Database --> System: Confirmation of review submission
+deactivate Database
+System --> User: Acknowledge the review submission
+deactivate System
+@enduml
