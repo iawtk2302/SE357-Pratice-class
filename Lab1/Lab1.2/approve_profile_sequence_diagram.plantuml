@@ -1,0 +1,23 @@
+@startuml
+actor Approver  
+participant System
+database Database 
+actor Candidate 
+
+
+Approver -> System: Request profile approval
+activate System
+System -> Database: Query profile from Database
+activate Database
+Database --> System: Return profile information
+deactivate Database
+System --> Approver: Return profile information
+Approver -> System: Review the profile
+Approver -> System: Make approval decision
+System -> Database: Update profile in Database
+activate Database
+Database --> System: Update successful
+deactivate Database
+System -> Candidate: Notify approval result
+deactivate System
+@enduml
