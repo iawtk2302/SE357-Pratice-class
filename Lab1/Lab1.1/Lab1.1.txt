@@ -13,3 +13,69 @@
 7. How is AI being proposed for knowledge acquisition and representation in requirements specifications?
 
 Answers:
+
+1. What criteria should be used in choosing an appropriate requirements engineering tool?
+- Functionality: Evaluate the tool's features and capabilities to ensure that it meets the requirements engineering needs of the project. Consider features such as requirements elicitation, documentation, traceability, collaboration, and change management.
+- Scalability: Assess whether the tool can handle the scale and complexity of your project. Consider factors such as the number of stakeholders, the volume of requirements, and the integration with other software development tools.
+- Ease of use: Consider the tool's user interface and intuitiveness. It should be easy for all stakeholders, including non-technical users, to work with the tool effectively. A steep learning curve or complex navigation may hinder adoption and productivity.
+- Customization: Determine if the tool allows customization to align with your organization's processes and terminology. Look for features such as customizable templates, fields, workflows, and reporting options.
+- Collaboration and communication: Check if the tool facilitates collaboration and communication among stakeholders. Features like commenting, notifications, and discussion forums can enhance teamwork and stakeholder engagement.
+- Integration: Assess the tool's compatibility and integration capabilities with other software development tools used in your organization, such as project management tools, version control systems, or testing tools. Seamless integration can streamline the requirements engineering process.
+- Traceability: Verify that the tool provides robust traceability features, allowing you to track requirements throughout the development lifecycle. It should enable you to establish and manage traceability links between requirements, design, implementation, and testing artifacts.
+- Reporting and analysis: Consider the tool's reporting capabilities. It should provide customizable reports and analytics to track progress, identify gaps, and generate documentation for different stakeholders.
+- Support and documentation: Evaluate the vendor's support offerings, including documentation, training resources, and customer support channels. Adequate support can help resolve issues and minimize downtime.
+- Cost and licensing: Consider the tool's cost, licensing model, and potential additional expenses such as maintenance, upgrades, or user licenses. Ensure that the tool fits within your budget and provides value for its cost.
+
+2. Are there any drawbacks to using certain tools in requirements engineering activities?
+- The tool market is rapidly changing and that tools are becoming increasingly complex and difficult to use.
+- Validation functionalities such as consistency, correctness, and completeness are still lacking in most of the tools.
+- Cost: Depending on the tool, there may be significant costs associated with licensing, maintenance, and support. The expense of acquiring and maintaining the tool can be a limiting factor, particularly for smaller organizations or projects with limited budgets.
+- Integration Challenges: Integrating requirements engineering tools with other software development tools and systems can present challenges. Compatibility issues and the need for data exchange between different tools can require additional effort and resources for integration, potentially causing delays or inconsistencies in the requirements engineering process.
+- Limited Customization: Some tools may have limited flexibility and customization options. This can restrict the adaptation of the tool to specific project needs or unique requirements engineering processes. Lack of customization capabilities can hinder the tool's effectiveness and limit its ability to align with the organization's workflows and practices.
+- Collaboration and Communication Limitations: Collaboration and communication among team members are crucial in requirements engineering activities. However, some tools may not provide robust collaboration features, making it challenging to effectively collaborate and communicate requirements across distributed teams or stakeholders. Insufficient collaboration functionality can lead to misunderstandings, delays, and difficulties in maintaining a shared understanding of the requirements.
+- Vendor Dependency: Depending on the tool, organizations may become dependent on a specific vendor for ongoing support, updates, and maintenance. This can limit the freedom to switch tools if the vendor discontinues support or if the organization wants to explore alternative options. Vendor dependency can introduce risks and potential disruptions to the requirements engineering process.
+- Tool Limitations: Each tool has its own set of features, capabilities, and limitations. Some tools may not support certain advanced requirements engineering techniques or may lack specific functionalities that are important for the project. It is important to evaluate whether the chosen tool adequately addresses the organization's requirements engineering needs and aligns with its methodology.
+
+3.	When selecting an open-source tool, what characteristics should you look for?
+- Requirements traceability mechanism
+- Requirements analysis mechanism
+- Security and accessibility mechanism
+- Portability and backend compatibility
+- Configuration management approach
+- Communication and collaboration mechanism
+- Change management support
+- Online publishing support
+- Usability features such as word processor compatibility
+- SRS documentation format
+
+4. How can tools enable distributed, global requirements engineering activities? What are the drawbacks in this regard?
+- Definition of workflow for requirements: A workflow (states, roles, state transitions) is configurable for requirements.
+    Drawbacks:
+        + Increased complexity: Defining a workflow for requirements can add complexity to the requirements engineering process. This is especially true for complex projects with many stakeholders and requirements.
+        + Reduced flexibility: A defined workflow may restrict the flexibility of the requirements engineering process. This may make it difficult to adapt the process to changing needs or unexpected challenges.
+        + Increased overhead: Defining and maintaining a workflow for requirements can add overhead to the requirements engineering process. This can be in terms of time, resources, and budget.
+        + Misalignment with team practices: A defined workflow may not be aligned with the existing practices of the team. This can lead to resistance to the workflow and make it difficult to implement successfully.
+        + Lack of buy-in: If stakeholders are not involved in defining the workflow, they may not be as likely to buy into it. This can lead to problems with implementation and adoption.
+- Automated generation of bi-directionality of traces: When the user creates a trace between artifact A and artifact B, it automatically establishes a backward trace from B to A.
+    Drawbacks:
+        + Incompleteness: Automated tools may not be able to generate bidirectional traces completely accurately. This is because the relationships between requirements and artifacts can be complex and difficult to formalize.
+        + Inaccuracy: Automated tools may generate bidirectional traces that are inaccurate. This is because the tools may not be able to correctly interpret the semantics of the requirements and artifacts.
+        + Inconsistency: Automated tools may generate bidirectional traces that are inconsistent. This is because the tools may use different algorithms or heuristics to generate the traces.
+        + Cost: Automated tools can be expensive to develop and maintain.
+        + Complexity: Automated tools can be complex to use and configure.
+        + Lack of transparency: It can be difficult to understand how automated tools generate bidirectional traces. This can make it difficult to debug and troubleshoot problems with the traces.
+- Definition of user-specific trace types: An authorized user can define trace types and assign names
+    Drawbacks:
+        + Over complication of Traceability: The definition of user-specific trace types can potentially complicate traceability. When each user has the ability to define their own trace types and assign names, it can lead to a proliferation of trace types, making the traceability structure more complex and harder to manage. This can impede the understanding and interpretation of trace relationships, particularly when different users adopt different naming conventions and interpretations.
+        + Inconsistent Traceability: User-defined trace types can result in inconsistencies in traceability. Without standardized trace types and naming conventions, different users may apply different interpretations and meanings to the same trace types. This can lead to confusion, miscommunication, and difficulties in maintaining a consistent and coherent traceability structure across the project.
+        + Increased Training and Onboarding Efforts: The adoption of user-specific trace types requires additional training and onboarding efforts. New team members need to familiarize themselves with the custom trace types and their associated meanings. This can introduce a learning curve and potentially delay the integration of new team members into the project.
+- Suspect traces: When a requirement changes, the tool automatically highlights all traces related to this requirement for checking and updating traces.
+    Drawbacks:
+        + False Positives: When a requirement changes and the tool automatically highlights all traces related to that requirement, there is a possibility of false positives. The tool may flag traces as suspect even if they are still valid and do not require updating. This can lead to unnecessary review and updates, consuming time and resources.
+        + Overlooking Genuine Issues: Relying solely on automated suspect trace detection may result in overlooking genuine issues. The tool may not always identify all the traces that require updating, leading to potential gaps or inconsistencies in the traceability information. This can impact the accuracy and reliability of trace relationships and hinder the effectiveness of traceability analysis.
+        + Dependency on Requirement Changes: The effectiveness of suspect traces is dependent on changes in requirements. If there are no or minimal changes to the requirements, the tool may not provide meaningful suspect traces. This can limit the usefulness of this feature, particularly in stable or mature project phases where requirements changes are infrequent.
+- Long-term archiving functionality: All data in the tool can be archived in a format accessible without the tool if necessary
+    Drawbacks:
+        + Resource Intensive: Archiving all data in the tool can be resource-intensive, especially for projects with large amounts of data. It may require significant storage space and computational resources to maintain and manage the archived data. This can result in additional costs and resource allocation for the archiving process.
+        + Retrieval Complexity: Retrieving archived data from the long-term archive may be time-consuming and complex. The archived data may be stored in a format that requires specialized tools or processes to access and interpret. This can create challenges when there is a need to retrieve specific information from the archive, potentially causing delays or difficulties in accessing the required data.
+        + Compatibility Issues: While the archived data is stored in a format accessible without the tool, there is no guarantee of compatibility with future tools and formats. Over time, software tools and technologies evolve, and the archived data may become incompatible or difficult to integrate with newer tools or systems. This can limit the usability and accessibility of the archived data in the future.
