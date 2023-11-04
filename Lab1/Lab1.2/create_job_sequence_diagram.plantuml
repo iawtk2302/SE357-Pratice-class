@@ -1,0 +1,17 @@
+@startuml
+actor User
+participant CreateJobUI
+participant JobService
+database Database
+
+User->CreateJobUI: Enter title, description,...
+CreateJobUI->JobService: Submit a job posting request
+JobService->Database: Add job to the database
+Database-->JobService: Return result
+JobService-->CreateJobUI: Return result
+alt success
+CreateJobUI-->User: Display successful message 
+else failure
+CreateJobUI-->User: Display failure message
+end
+@enduml
