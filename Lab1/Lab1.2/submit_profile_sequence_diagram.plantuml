@@ -1,0 +1,15 @@
+@startuml
+actor Submitter 
+participant System 
+database Database 
+
+
+Submitter -> System: Request to submit a profile
+activate System
+System -> Database: Create a new profile in the database
+activate Database
+Database --> System: Confirmation of profile creation
+deactivate Database
+System --> Submitter: Acknowledge the profile submission
+deactivate System
+@enduml
