@@ -1,0 +1,19 @@
+@startuml
+actor User
+participant SearchUI
+participant SearchController
+database Database
+
+User->SearchUI: Enters search query
+activate SearchUI
+SearchUI->SearchController: Sends search query
+activate SearchController
+SearchController->Database: Queries database for matching results
+activate Database
+Database-->SearchController: Returns matching results
+deactivate Database
+SearchController-->SearchUI: Returns matching results
+deactivate SearchController
+SearchUI-->User: Displays matching results
+deactivate SearchUI
+@enduml
