@@ -1,0 +1,27 @@
+@startuml
+|User|
+start
+:Press review button;
+|System|
+:Retrieve photo shoot details from the database;
+|Database|
+:Return photo shoot information;
+|System|
+:Display photo shoot details for review;
+|User|
+:Enter review;
+:Press submit button;
+|System|
+:Request submit review;
+|Database|
+:Save the review in the database;
+:Return review result;
+|System|
+:Return review result;
+if (Check status) then (success)
+  :Display successful message;
+  stop
+else (failure)
+  :Display failure message;
+  stop
+@end
