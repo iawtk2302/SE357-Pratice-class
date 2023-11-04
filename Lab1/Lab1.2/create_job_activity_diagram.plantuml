@@ -1,0 +1,19 @@
+@startuml
+|User|
+start
+:Press create job button;
+:Enter title, description,...;
+:Press submit button;
+|System|
+:Submit a job posting request;
+|Database|
+:Add job to the database;
+:Return result;
+|System|
+if (Check successful status) then (yes)
+  :Display successful message;
+  stop
+else (no)
+  :Display failure message;
+  stop
+@end
