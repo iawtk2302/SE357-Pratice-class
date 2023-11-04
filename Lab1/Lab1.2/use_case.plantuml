@@ -1,0 +1,69 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+actor Administrator
+actor Model
+actor Photographer
+actor Customer
+rectangle "PhotoMe System" {
+  usecase "Group moderation" as UC1
+  usecase "Block group" as UC2
+  usecase "Unblock group" as UC3
+  usecase "Post moderation" as UC4
+  usecase "Unblock post" as UC5
+  usecase "Block post" as UC6
+  usecase "User moderation" as UC7
+  usecase "Block user" as UC8
+  usecase "Unblock user" as UC9
+  usecase "Register" as UC10
+  usecase "Review" as UC11
+  usecase "Login" as UC12
+  usecase "Logout" as UC13
+  usecase "Accept schedule confirmation" as UC14
+  usecase "Update infomation" as UC15
+  usecase "Manage post" as UC16
+  usecase "Chat" as UC17
+  usecase "Call" as UC18
+  usecase "Search/filter" as UC19
+  usecase "Follow user" as UC20
+  usecase "Mange group" as UC21
+  usecase "Notification" as UC22
+  usecase "Manage working schedule" as UC23
+  usecase "Apply CV" as UC24
+  usecase "Create schedule confirmation" as UC25
+  usecase "Mange CV" as UC26
+  usecase "Accept CV" as UC27
+  usecase "Reject CV" as UC28
+
+  Administrator --> UC1
+  Administrator --> UC4
+  Administrator --> UC7
+  Customer --> UC10
+  Customer --> UC11
+  Customer --> UC12
+  Customer --> UC13
+  Customer --> UC14
+  Customer --> UC15
+  Customer --> UC16
+  Customer --> UC17
+  Customer --> UC18
+  Customer --> UC19
+  Customer --> UC20
+  Customer --> UC21
+  Customer --> UC22
+  Customer --> UC23
+  Customer --> UC24
+  Photographer --> UC25
+  Photographer --> UC26
+  Customer <|-- Photographer
+  Customer <|-- Model
+  UC1-->UC2:<<extend>>
+  UC1-->UC3:<<extend>>
+  UC4-->UC5:<<extend>>
+  UC4-->UC6:<<extend>>
+  UC7-->UC8:<<extend>>
+  UC7-->UC9:<<extend>>
+  UC26-->UC27:<<extend>>
+  UC26-->UC28:<<extend>>
+}
+@enduml
