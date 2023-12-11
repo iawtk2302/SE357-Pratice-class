@@ -122,23 +122,23 @@ Person <|-- Member
 Member <|-- Photographer
 Member <|-- Model
 Member <|-- Customer
-Member -- Group
-Member -- Post
-Member -- Message
+Member "1..*"--"0..*" Group
+Member "1"--"0..*" Post
+Member "0..*"--"1..*" Message
 
-Photographer -- Job
-Photographer -- Task
-Photographer -- ScheduleConfirmation
-Job -- Application
+Photographer "1"--"0..*" Job
+Photographer "1"--"0..*" Task
+Photographer "1"--"0..*" ScheduleConfirmation
+Job "1"--"0..*" Application
 
-Model -- Task
-Model -- ApplicationRequest
+Model "0..*"--"1..*" Task
+Model "1"--"0..*" ApplicationRequest
 
 
-Notification -- ScheduleConfirmation
-Notification -- ApplicationRequest
-Notification -- Message
-Notification -- Post
-Notification -- Comment
+Notification "*"<--"1" ScheduleConfirmation : creates
+Notification "*"<--"1" ApplicationRequest: creates
+Notification "*"<--"1" Message: creates
+Notification "*"<--"1" Post: creates
+Notification "*"<--"1" Comment: creates
 
 @enduml
