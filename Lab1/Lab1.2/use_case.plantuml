@@ -52,7 +52,7 @@ rectangle "PhotoMe System" {
   Customer --> UC21
   Customer --> UC22
   Customer --> UC23
-  Customer --> UC24
+  Model --> UC24
   Photographer --> UC25
   Photographer --> UC26
   Customer <|-- Photographer
