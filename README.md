@@ -5,7 +5,7 @@
 **Contributors**:
 
 - [Role: Name - Student ID - Github link]
-- Leader: Nguyen Tuan Khoi - 20521480 - [Github](https://github.com/vutuanhai237)
+- Leader: Nguyen Tuan Khoi - 20521480 - [Github](https://github.com/iawtk2302)
 - Member: Nguyen Ba Khanh - 20521450
 
 **Supervisors**:
