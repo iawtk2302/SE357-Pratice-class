@@ -10,7 +10,7 @@
 
 **Supervisors**:
 
-- Vu Tuan Hai - [Github](https://github.com/vutuanhai23)
+- Vu Tuan Hai - [Github](https://github.com/vutuanhai237)
 
 **Description**: The Photo Social Network application is to create a user-centric platform that facilitates seamless photo sharing, networking, and community building. This application aims to offer a user-friendly interface where individuals can effortlessly upload, edit, and share their visual content while engaging with a diverse community of like-minded individuals. The primary goal is to enhance user experience by providing robust features such as customizable photo filters, tagging, commenting, and intuitive navigation. Additionally, the application will focus on implementing strong privacy controls, ensuring data security, and fostering a safe environment for users to connect and interact.
 
